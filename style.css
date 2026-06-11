@@ -1,0 +1,166 @@
+/* ===== Kedai Nasi Sinar Berkah — biolink ===== */
+/* Brand: maroon #942D33 · coral #F48365 · kuning #EDE944 · biru langit #2DC3F2 · krem vintage */
+
+@font-face {
+  font-family: "Creative Vintage";
+  src: url("assets/fonts/CreativeVintage.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fabulous Script";
+  src: url("assets/fonts/FabulousScript.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --maroon: #942D33;
+  --maroon-dark: #6f2127;
+  --coral: #F48365;
+  --kuning: #EDE944;
+  --biru: #2DC3F2;
+  --krem: #FBF3E4;
+  --krem-2: #F6E7CC;
+  --ink: #3a2422;
+  --card: #FFFDF8;
+  --radius: 18px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Josefin Sans", system-ui, sans-serif;
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 28px 16px 48px;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, #ffe9c9 0%, rgba(255,233,201,0) 60%),
+    linear-gradient(160deg, var(--krem) 0%, var(--krem-2) 55%, #f0d8b0 100%);
+  background-attachment: fixed;
+}
+
+/* subtle vintage paper grain */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .05;
+  background-image: radial-gradient(var(--maroon) 1px, transparent 1px);
+  background-size: 9px 9px;
+}
+
+.card {
+  width: 100%;
+  max-width: 460px;
+  background: var(--card);
+  border: 2px solid rgba(148,45,51,.18);
+  border-radius: 26px;
+  padding: 30px 22px 22px;
+  box-shadow: 0 22px 50px -22px rgba(111,33,39,.55);
+  position: relative;
+}
+
+/* top accent ribbon */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 7px;
+  border-radius: 26px 26px 0 0;
+  background: linear-gradient(90deg, var(--maroon) 0%, var(--coral) 50%, var(--kuning) 100%);
+}
+
+.logo-wrap { text-align: center; margin-top: 6px; }
+.logo { width: 100%; max-width: 290px; height: auto; }
+
+.tagline {
+  font-family: "Fabulous Script", "Creative Vintage", cursive;
+  text-align: center;
+  color: var(--maroon);
+  font-size: 30px;
+  line-height: 1.1;
+  margin: 6px 0 4px;
+}
+
+.subtitle {
+  font-family: "Neuton", Georgia, serif;
+  text-align: center;
+  color: #6a4b46;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 22px;
+}
+
+/* ===== link buttons ===== */
+.links { display: flex; flex-direction: column; gap: 13px; }
+
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: var(--maroon);
+  background: #fff;
+  border: 2px solid var(--maroon);
+  border-radius: var(--radius);
+  padding: 13px 16px;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  box-shadow: 0 4px 0 0 rgba(148,45,51,.85);
+}
+.link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0 0 rgba(148,45,51,.9);
+  background: #fff8ef;
+}
+.link-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 0 rgba(148,45,51,.85);
+}
+
+.link-btn .ic {
+  font-size: 22px;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  background: var(--krem-2);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.link-btn .txt { display: flex; flex-direction: column; line-height: 1.15; }
+.link-btn .txt b { font-weight: 700; font-size: 16.5px; letter-spacing: .2px; }
+.link-btn .txt small { font-size: 12.5px; color: #8a6a5f; font-weight: 500; }
+
+/* primary = WA order */
+.link-btn.primary {
+  background: var(--maroon);
+  color: #fff;
+  border-color: var(--maroon-dark);
+  box-shadow: 0 4px 0 0 var(--maroon-dark);
+}
+.link-btn.primary:hover { background: var(--maroon-dark); }
+.link-btn.primary .ic { background: rgba(255,255,255,.16); }
+.link-btn.primary .txt small { color: #f3d3c9; }
+
+/* ===== footer ===== */
+.foot { text-align: center; margin-top: 24px; }
+.hours {
+  font-family: "Neuton", serif;
+  font-size: 14px;
+  color: var(--maroon);
+  background: var(--kuning);
+  display: inline-block;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+.credit { font-size: 11.5px; color: #9a7d72; margin-bottom: 3px; }
+.by { font-size: 11.5px; color: #9a7d72; }
+.by a { color: var(--coral); text-decoration: none; font-weight: 600; }
+
+@media (max-width: 380px) {
+  .tagline { font-size: 26px; }
+  .link-btn .txt b { font-size: 15px; }
+}
