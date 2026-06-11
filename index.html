@@ -17,16 +17,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&family=Neuton:wght@400;700&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1938521766641036');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1938521766641036&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
 <!--
   ============================================================
-  GANTI SEMUA LINK DI BAWAH (cari "GANTI").
-  Format WhatsApp: https://wa.me/62812xxxx?text=Halo%20Kedai%20Nasi...
-  (62 = kode Indonesia, buang 0 depan nomor; spasi = %20)
-  Kalau salah satu channel BELUM ADA (mis. belum di GrabFood),
-  hapus saja blok <a class="link-btn"> ... </a>-nya.
+  Channel BELUM ADA disembunyikan (GoFood, GrabFood, Instagram).
+  Kalau link sudah ada nanti: keluarkan blok dari komentar
+  "DISEMBUNYIKAN" di bawah + ganti URL "GANTI"-nya.
   ============================================================
 -->
 
@@ -36,59 +52,71 @@
     <img src="assets/logo.png" alt="Kedai Nasi Sinar Berkah" class="logo" />
   </div>
 
-  <p class="tagline">Masakan Rumahan</p>
-  <p class="subtitle">Tulus &amp; hangat — pesan & datang yuk, Lur.</p>
+  <p class="tagline">Bahagia Tidak Harus Mewah</p>
+  <p class="subtitle">Masakan rumahan · tulus · hangat — pesan & datang yuk, Lur.</p>
 
   <nav class="links">
 
     <!-- WHATSAPP ORDER (channel utama) -->
-    <a class="link-btn primary" href="https://wa.me/62GANTI?text=Halo%20Kedai%20Nasi%20Sinar%20Berkah%2C%20mau%20pesan%20nasi" target="_blank" rel="noopener">
+    <a class="link-btn primary" href="https://wa.me/6285222636606?text=Halo%20Kedai%20Nasi%20Sinar%20Berkah%2C%20mau%20pesan%20nasi" target="_blank" rel="noopener" onclick="if(window.fbq)fbq('track','Contact');">
       <span class="ic">💬</span>
       <span class="txt"><b>Pesan via WhatsApp</b><small>Order harian & nasi box</small></span>
     </a>
 
     <!-- CATERING / QUOTE -->
-    <a class="link-btn" href="https://wa.me/62GANTI?text=Halo%2C%20mau%20tanya%20paket%20Catering%2FNasi%20Box%20acara" target="_blank" rel="noopener">
+    <a class="link-btn" href="https://wa.me/6285222636606?text=Halo%2C%20mau%20tanya%20paket%20Catering%2FNasi%20Box%20acara" target="_blank" rel="noopener" onclick="if(window.fbq)fbq('track','Contact');">
       <span class="ic">🍱</span>
       <span class="txt"><b>Catering & Paket Acara</b><small>Arisan · rapat · syukuran</small></span>
     </a>
 
-    <!-- GOFOOD -->
-    <a class="link-btn" href="GANTI_LINK_GOFOOD" target="_blank" rel="noopener">
-      <span class="ic">🛵</span>
-      <span class="txt"><b>Pesan di GoFood</b><small>Diantar ke rumah</small></span>
+    <!-- MENU 1 -->
+    <a class="link-btn" href="https://drive.google.com/file/d/1bH41WOhjcF9h0f1a4N0eHg36Ir6-yEEJ/view?usp=sharing" target="_blank" rel="noopener" onclick="if(window.fbq)fbq('track','ViewContent');">
+      <span class="ic">📋</span>
+      <span class="txt"><b>Menu Kedai Nasi Sinar Berkah</b><small>Lihat daftar menu & harga</small></span>
     </a>
 
-    <!-- GRABFOOD -->
-    <a class="link-btn" href="GANTI_LINK_GRABFOOD" target="_blank" rel="noopener">
-      <span class="ic">🏍️</span>
-      <span class="txt"><b>Pesan di GrabFood</b><small>Diantar ke rumah</small></span>
+    <!-- MENU 2 -->
+    <a class="link-btn" href="https://drive.google.com/file/d/1sh7J7lzoat6fdS34ybEvp8cRoK42oJeF/view?usp=sharing" target="_blank" rel="noopener" onclick="if(window.fbq)fbq('track','ViewContent');">
+      <span class="ic">🍛</span>
+      <span class="txt"><b>Menu Warung Berkah</b><small>Pilihan menu lainnya</small></span>
     </a>
 
     <!-- GOOGLE MAPS -->
-    <a class="link-btn" href="GANTI_LINK_MAPS" target="_blank" rel="noopener">
+    <a class="link-btn" href="https://maps.app.goo.gl/US9jJKxS7BCrJx5J6" target="_blank" rel="noopener" onclick="if(window.fbq)fbq('track','FindLocation');">
       <span class="ic">📍</span>
       <span class="txt"><b>Lokasi & Arah</b><small>Mampir makan di kedai</small></span>
     </a>
 
-    <!-- INSTAGRAM -->
-    <a class="link-btn" href="https://instagram.com/GANTI_USERNAME" target="_blank" rel="noopener">
-      <span class="ic">📸</span>
-      <span class="txt"><b>Instagram</b><small>Menu hari ini & promo</small></span>
-    </a>
-
     <!-- TIKTOK -->
-    <a class="link-btn" href="https://tiktok.com/@GANTI_USERNAME" target="_blank" rel="noopener">
+    <a class="link-btn" href="https://www.tiktok.com/@kedainasi_sinarberkah" target="_blank" rel="noopener">
       <span class="ic">🎵</span>
       <span class="txt"><b>TikTok</b><small>Di balik warung</small></span>
     </a>
 
+    <!-- ===== DISEMBUNYIKAN (belum ada link) =====
+
+    <a class="link-btn" href="GANTI_LINK_GOFOOD" target="_blank" rel="noopener">
+      <span class="ic">[icon]</span>
+      <span class="txt"><b>Pesan di GoFood</b><small>Diantar ke rumah</small></span>
+    </a>
+
+    <a class="link-btn" href="GANTI_LINK_GRABFOOD" target="_blank" rel="noopener">
+      <span class="ic">[icon]</span>
+      <span class="txt"><b>Pesan di GrabFood</b><small>Diantar ke rumah</small></span>
+    </a>
+
+    <a class="link-btn" href="https://instagram.com/GANTI_USERNAME" target="_blank" rel="noopener">
+      <span class="ic">[icon]</span>
+      <span class="txt"><b>Instagram</b><small>Menu hari ini & promo</small></span>
+    </a>
+
+    ===== /DISEMBUNYIKAN ===== -->
+
   </nav>
 
   <footer class="foot">
-    <p class="hours">Buka tiap hari · jam buka cek Instagram</p>
+    <p class="hours">Buka tiap hari · jam buka cek TikTok</p>
     <p class="credit">© 2026 Kedai Nasi Sinar Berkah · CV Amanah Pangan Nusantara</p>
-    <p class="by">dibuat oleh <a href="https://motekreatif.com" target="_blank" rel="noopener">Mote Kreatif</a></p>
   </footer>
 
 </main>
