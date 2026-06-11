@@ -63,16 +63,6 @@ body::before {
   position: relative;
 }
 
-/* top accent ribbon */
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 7px;
-  border-radius: 26px 26px 0 0;
-  background: linear-gradient(90deg, var(--maroon) 0%, var(--coral) 50%, var(--kuning) 100%);
-}
-
 .logo-wrap { text-align: center; margin-top: 6px; }
 .logo { width: 100%; max-width: 290px; height: auto; }
 
