@@ -1,156 +1,269 @@
 /* ===== Kedai Nasi Sinar Berkah — biolink ===== */
-/* Brand: maroon #942D33 · coral #F48365 · kuning #EDE944 · biru langit #2DC3F2 · krem vintage */
+/* Style match: "Digital Marketing Plan Juni 2026" deck (Mote Kreatif).
+   Blue "slide" card on cream field, white link cards,
+   Fabulous Script accents, yellow sunburst, maroon/coral logo. */
 
 @font-face {
-  font-family: "Creative Vintage";
-  src: url("assets/fonts/CreativeVintage.ttf") format("truetype");
-  font-display: swap;
+    font-family: "Creative Vintage";
+    src: url("assets/fonts/CreativeVintage.ttf") format("truetype");
+    font-display: swap;
 }
 @font-face {
-  font-family: "Fabulous Script";
-  src: url("assets/fonts/FabulousScript.ttf") format("truetype");
-  font-display: swap;
+    font-family: "Fabulous Script";
+    src: url("assets/fonts/FabulousScript.ttf") format("truetype");
+    font-display: swap;
 }
 
 :root {
-  --maroon: #942D33;
-  --maroon-dark: #6f2127;
-  --coral: #F48365;
-  --kuning: #EDE944;
-  --biru: #2DC3F2;
-  --krem: #FBF3E4;
-  --krem-2: #F6E7CC;
-  --ink: #3a2422;
-  --card: #FFFDF8;
-  --radius: 18px;
+    --biru: #2dc3f2; /* dominant deck blue */
+    --biru-dark: #1aa7d8;
+    --biru-deep: #0e8fbe;
+    --kuning: #ede944;
+    --maroon: #942d33;
+    --maroon-dark: #6f2127;
+    --coral: #f48365;
+    --krem: #fbf3e4;
+    --krem-2: #f6e7cc;
+    --ink: #2b2622; /* near-black heading like deck */
+    --card: #fffdf8;
+    --radius: 18px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-  font-family: "Josefin Sans", system-ui, sans-serif;
-  color: var(--ink);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 28px 16px 48px;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, #ffe9c9 0%, rgba(255,233,201,0) 60%),
-    linear-gradient(160deg, var(--krem) 0%, var(--krem-2) 55%, #f0d8b0 100%);
-  background-attachment: fixed;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 34px 16px 54px;
+    /* cream field, like deck margins around a slide */
+    background: #2dc3f2;
+    background-attachment: fixed;
 }
 
-/* subtle vintage paper grain */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  opacity: .05;
-  background-image: radial-gradient(var(--maroon) 1px, transparent 1px);
-  background-size: 9px 9px;
-}
-
+/* ===== the blue "slide" card ===== */
 .card {
-  width: 100%;
-  max-width: 460px;
-  background: var(--card);
-  border: 2px solid rgba(148,45,51,.18);
-  border-radius: 26px;
-  padding: 30px 22px 22px;
-  box-shadow: 0 22px 50px -22px rgba(111,33,39,.55);
-  position: relative;
+    width: 100%;
+    max-width: 460px;
+    background: linear-gradient(
+        165deg,
+        var(--biru) 0%,
+        var(--biru) 50%,
+        var(--biru-dark) 100%
+    );
+    border: 3px solid #fff;
+    border-radius: 26px;
+    padding: 30px 22px 22px;
+    box-shadow: 0 26px 60px -22px rgba(10, 70, 100, 0.55);
+    position: relative;
+    overflow: hidden;
+}
+/* yellow sunburst glow from top — deck signature decoration */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -300px;
+    left: 50%;
+    width: 640px;
+    height: 640px;
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0.3;
+    background: repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        rgba(255, 255, 255, 0) 0deg,
+        rgba(255, 255, 255, 0) 3deg,
+        var(--kuning) 3deg,
+        var(--kuning) 4deg
+    );
+    -webkit-mask: radial-gradient(
+        circle at 50% 50%,
+        #000 0%,
+        rgba(0, 0, 0, 0.6) 32%,
+        transparent 64%
+    );
+    mask: radial-gradient(
+        circle at 50% 50%,
+        #000 0%,
+        rgba(0, 0, 0, 0.6) 32%,
+        transparent 64%
+    );
 }
 
-.logo-wrap { text-align: center; margin-top: 6px; }
-.logo { width: 100%; max-width: 290px; height: auto; }
+.logo-wrap {
+    text-align: center;
+    margin-top: 4px;
+    position: relative;
+    z-index: 1;
+}
+/* small yellow sunburst tucked behind logo, like deck slides */
+.logo-wrap::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 18px;
+    width: 84px;
+    height: 84px;
+    background: repeating-conic-gradient(
+        from 0deg at 50% 50%,
+        transparent 0deg,
+        transparent 6deg,
+        var(--kuning) 6deg,
+        var(--kuning) 7.5deg
+    );
+    -webkit-mask: radial-gradient(circle, #000 18%, transparent 60%);
+    mask: radial-gradient(circle, #000 18%, transparent 60%);
+    opacity: 0.9;
+    pointer-events: none;
+}
+/* cream halo so the logo stays legible on blue */
+.logo {
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    position: relative;
+    filter: drop-shadow(0 0 14px rgba(255, 253, 248, 0.9))
+        drop-shadow(0 0 14px rgba(255, 253, 248, 0.9));
+}
 
 .tagline {
-  font-family: "Fabulous Script", "Creative Vintage", cursive;
-  text-align: center;
-  color: var(--maroon);
-  font-size: 30px;
-  line-height: 1.1;
-  margin: 6px 0 4px;
+    font-family: "Fabulous Script", "Creative Vintage", cursive;
+    text-align: center;
+    color: #fffdf6;
+    font-size: 26px;
+    line-height: 1.05;
+    margin: 8px 0 4px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(10, 70, 100, 0.35);
 }
 
 .subtitle {
-  font-family: "Neuton", Georgia, serif;
-  text-align: center;
-  color: #6a4b46;
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 22px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 14.5px;
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
 }
 
-/* ===== link buttons ===== */
-.links { display: flex; flex-direction: column; gap: 13px; }
+/* ===== link buttons (white deck cards) ===== */
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
 
 .link-btn {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: var(--maroon);
-  background: #fff;
-  border: 2px solid var(--maroon);
-  border-radius: var(--radius);
-  padding: 13px 16px;
-  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
-  box-shadow: 0 4px 0 0 rgba(148,45,51,.85);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--ink);
+    background: var(--card);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-radius: var(--radius);
+    padding: 13px 16px;
+    transition:
+        transform 0.13s ease,
+        box-shadow 0.13s ease;
+    box-shadow: 0 10px 20px -12px rgba(10, 70, 100, 0.7);
 }
 .link-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 0 0 rgba(148,45,51,.9);
-  background: #fff8ef;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 26px -12px rgba(10, 70, 100, 0.7);
 }
 .link-btn:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 0 rgba(148,45,51,.85);
+    transform: translateY(-1px);
 }
 
 .link-btn .ic {
-  font-size: 22px;
-  width: 38px; height: 38px;
-  display: grid; place-items: center;
-  background: var(--krem-2);
-  border-radius: 12px;
-  flex-shrink: 0;
+    font-size: 21px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--kuning);
+    border-radius: 12px;
+    flex-shrink: 0;
 }
 
-.link-btn .txt { display: flex; flex-direction: column; line-height: 1.15; }
-.link-btn .txt b { font-weight: 700; font-size: 16.5px; letter-spacing: .2px; }
-.link-btn .txt small { font-size: 12.5px; color: #8a6a5f; font-weight: 500; }
+.link-btn .txt {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+.link-btn .txt b {
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 0.1px;
+}
+.link-btn .txt small {
+    font-size: 12.5px;
+    color: #8a7065;
+    font-weight: 500;
+    margin-top: 1px;
+}
 
-/* primary = WA order */
+/* primary = WA order (maroon, like logo wordmark) */
 .link-btn.primary {
-  background: var(--maroon);
-  color: #fff;
-  border-color: var(--maroon-dark);
-  box-shadow: 0 4px 0 0 var(--maroon-dark);
+    background: var(--maroon);
+    color: #fff;
+    border-color: var(--maroon-dark);
+    box-shadow: 0 12px 24px -10px rgba(111, 33, 39, 0.9);
 }
-.link-btn.primary:hover { background: var(--maroon-dark); }
-.link-btn.primary .ic { background: rgba(255,255,255,.16); }
-.link-btn.primary .txt small { color: #f3d3c9; }
+.link-btn.primary:hover {
+    background: var(--maroon-dark);
+}
+.link-btn.primary .ic {
+    background: var(--kuning);
+    color: var(--maroon);
+}
+.link-btn.primary .txt small {
+    color: #f3d3c9;
+}
 
 /* ===== footer ===== */
-.foot { text-align: center; margin-top: 24px; }
-.hours {
-  font-family: "Neuton", serif;
-  font-size: 14px;
-  color: var(--maroon);
-  background: var(--kuning);
-  display: inline-block;
-  padding: 5px 14px;
-  border-radius: 999px;
-  margin-bottom: 14px;
+.foot {
+    text-align: center;
+    margin-top: 24px;
+    position: relative;
+    z-index: 1;
 }
-.credit { font-size: 11.5px; color: #9a7d72; margin-bottom: 3px; }
-.by { font-size: 11.5px; color: #9a7d72; }
-.by a { color: var(--coral); text-decoration: none; font-weight: 600; }
+.hours {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--maroon);
+    background: var(--kuning);
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+}
+.credit {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3px;
+}
 
 @media (max-width: 380px) {
-  .tagline { font-size: 26px; }
-  .link-btn .txt b { font-size: 15px; }
+    .tagline {
+        font-size: 28px;
+    }
+    .link-btn .txt b {
+        font-size: 15px;
+    }
 }
