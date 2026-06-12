@@ -19,12 +19,6 @@
         <meta property="og:type" content="website" />
 
         <link rel="icon" type="image/png" href="assets/logo.png" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
-            rel="stylesheet"
-        />
         <link rel="stylesheet" href="style.css" />
 
         <!-- Meta Pixel Code -->
@@ -65,38 +59,28 @@
         <!-- End Meta Pixel Code -->
     </head>
     <body>
-        <!--
-  ============================================================
-  Channel BELUM ADA disembunyikan (GoFood, GrabFood, Instagram).
-  Kalau link sudah ada nanti: keluarkan blok dari komentar
-  "DISEMBUNYIKAN" di bawah + ganti URL "GANTI"-nya.
-  ============================================================
--->
-
         <main class="card">
-            <div class="logo-wrap">
-                <img
-                    src="assets/logo.png"
-                    alt="Kedai Nasi Sinar Berkah"
-                    class="logo"
-                />
-            </div>
-
-            <p class="tagline">Bahagia Tidak Harus Mewah</p>
-            <p class="subtitle">Tulus &amp; hangat — pesan & datang aja Yuk!</p>
+            <!-- header art (logo + headline + sunburst) baked from brand asset -->
+            <img
+                class="hero"
+                src="assets/hero.jpg"
+                alt="Kedai Nasi Sinar Berkah — Masakan Rumahan, Tulus, Hangat. Pesan & datang yuk, Lur!"
+            />
 
             <nav class="links">
                 <!-- WHATSAPP ORDER (channel utama) -->
                 <a
                     class="link-btn primary"
-                    href="https://wa.me/6285222636606?text=Halo%20Kedai%20Nasi%20Sinar%20Berkah%2C%20mau%20pesan%20nasi"
+                    href="https://wa.me/6285222636606?text=Halo%20Kedai%20Nasi%20Sinar%20Berkah%2C%20mau%20Reservasi"
                     target="_blank"
                     rel="noopener"
                     onclick="if (window.fbq) fbq('track', 'Contact');"
                 >
-                    <span class="ic">💬</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-01.png" alt=""
+                    /></span>
                     <span class="txt"
-                        ><b>Pesan via WhatsApp</b
+                        ><b>Pesan Via Whatsapp</b
                         ><small>Order harian & nasi box</small></span
                     >
                 </a>
@@ -109,10 +93,12 @@
                     rel="noopener"
                     onclick="if (window.fbq) fbq('track', 'Contact');"
                 >
-                    <span class="ic">🍱</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-02.png" alt=""
+                    /></span>
                     <span class="txt"
                         ><b>Catering & Paket Acara</b
-                        ><small>Arisan · rapat · syukuran</small></span
+                        ><small>Arisan • Rapat • Syukuran</small></span
                     >
                 </a>
 
@@ -124,10 +110,12 @@
                     rel="noopener"
                     onclick="if (window.fbq) fbq('track', 'ViewContent');"
                 >
-                    <span class="ic">📋</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-03.png" alt=""
+                    /></span>
                     <span class="txt"
                         ><b>Menu Kedai Nasi Sinar Berkah</b
-                        ><small>Lihat daftar menu & harga</small></span
+                        ><small>Lihat Daftar Menu & Harga</small></span
                     >
                 </a>
 
@@ -139,10 +127,12 @@
                     rel="noopener"
                     onclick="if (window.fbq) fbq('track', 'ViewContent');"
                 >
-                    <span class="ic">🍛</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-04.png" alt=""
+                    /></span>
                     <span class="txt"
                         ><b>Menu Warung Berkah</b
-                        ><small>Pilihan menu lainnya</small></span
+                        ><small>Pilihan Menu Lainnya</small></span
                     >
                 </a>
 
@@ -154,10 +144,12 @@
                     rel="noopener"
                     onclick="if (window.fbq) fbq('track', 'FindLocation');"
                 >
-                    <span class="ic">📍</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-05.png" alt=""
+                    /></span>
                     <span class="txt"
-                        ><b>Lokasi & Arah</b
-                        ><small>Mampir makan di kedai</small></span
+                        ><b>Direct Maps</b
+                        ><small>Mampir Makan di Kedai</small></span
                     >
                 </a>
 
@@ -168,9 +160,11 @@
                     target="_blank"
                     rel="noopener"
                 >
-                    <span class="ic">🎵</span>
+                    <span class="ic"
+                        ><img src="assets/icons/i-06.png" alt=""
+                    /></span>
                     <span class="txt"
-                        ><b>TikTok</b><small>Di balik warung</small></span
+                        ><b>Tiktok</b><small>Di Balik Warung</small></span
                     >
                 </a>
 
@@ -195,8 +189,10 @@
             </nav>
 
             <footer class="foot">
-                <p class="hours">Buka tiap hari · jam buka cek TikTok</p>
-                <p class="credit">© 2026 Kedai Nasi Sinar Berkah</p>
+                <p class="hours">Buka Setiap Hari · jam buka cek tiktok</p>
+                <p class="credit">
+                    © 2026 Kedai Nasi Sinar Berkah • CV Amanah Pangan Nusantara
+                </p>
             </footer>
         </main>
     </body>
